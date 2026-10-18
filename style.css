@@ -1,0 +1,2292 @@
+/* BASIC PAGE SETTINGS */
+@font-face {
+    font-family: "MyHandwriting";
+    src: url("fonts/just me.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080817;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+/* DIGITAL DREAMSCAPE BACKGROUND */
+
+body {
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(107, 91, 191, 0.18),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 85% 75%,
+            rgba(71, 120, 180, 0.16),
+            transparent 40%
+        ),
+        #111827;
+
+    color: #F3F0FF;
+}
+/* SUBTLE GLOW AT THE TOP */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -200px;
+    left: 25%;
+    width: 50%;
+    height: 350px;
+    background: rgba(104, 65, 255, 0.12);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+/* HEADER */
+
+.site-header {
+    width: 100%;
+    min-height: 86px;
+    padding: 20px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(8, 8, 23, 0.72);
+    backdrop-filter: blur(16px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* WEBSITE LOGO */
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+/* NAVIGATION LINKS */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.navigation a {
+    color: #c5c5d8;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #8b5cf6;
+}
+
+/* CONTACT BUTTON */
+
+.nav-button {
+    padding: 11px 20px;
+    border: 1px solid rgba(139, 92, 246, 0.7);
+    border-radius: 30px;
+    color: #ffffff;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(139, 92, 246, 0.18);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+}
+/* HERO SECTION */
+
+.hero {
+    min-height: 85vh;
+    padding: 100px 7% 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    position: relative;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    min-width: 0;
+}
+
+/* SMALL INTRODUCTION ABOVE THE TITLE */
+
+.eyebrow {
+    color: #a78bfa;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+/* MAIN HEADLINE */
+
+.hero h1 {
+    max-width: 700px;
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #60a5fa,
+        #e879f9
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* INTRODUCTION PARAGRAPH */
+
+.hero-description {
+    max-width: 600px;
+    color: #b8b8cc;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* SHARED BUTTON STYLE */
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary {
+    color: #ffffff;
+    background: linear-gradient(
+        100deg,
+        #7c3aed,
+        #2563eb
+    );
+
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 35px rgba(124, 58, 237, 0.5);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
+}
+.universe-art {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    flex-shrink: 0;
+}
+
+.core {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #DCD6FF, #8B7CF6 65%, #5145A8);
+    color: #FFFFFF;
+
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    box-shadow: 0 0 35px rgba(139, 124, 246, 0.4);
+    animation: float 4s ease-in-out infinite;
+}
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 80px 6% 50px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .universe-art {
+        width: min(420px, 100%);
+        flex-shrink: 1;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}
+/* ORBITAL RINGS */
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(184, 165, 255, 0.45);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*SMALL PLANETS */
+
+.planet {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* ILLUSTRATION CAPTION */
+
+.art-caption {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #C4C9D8;
+}
+/* PLANET ORBIT ANIMATIONS */
+
+/* ORBITAL RINGS */
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(184, 165, 255, 0.45);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SMALLER ORBIT */
+
+.orbit-one {
+    width: 280px;
+    height: 280px;
+    animation: spin-one 12s linear infinite;
+}
+
+/* LARGER ORBIT */
+
+.orbit-two {
+    width: 370px;
+    height: 370px;
+    animation: spin-two 18s linear infinite;
+}
+
+/* PLANETS */
+
+.planet {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* BLUE PLANET */
+
+.planet-one {
+    background: #82CFFF;
+    box-shadow: 0 0 18px rgba(130, 207, 255, 0.8);
+}
+
+/* PINK PLANET */
+
+.planet-two {
+    width: 12px;
+    height: 12px;
+    background: #FFB8D2;
+    box-shadow: 0 0 16px rgba(255, 184, 210, 0.8);
+}
+
+/* ORBIT ANIMATIONS */
+
+@keyframes spin-one {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes spin-two {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+/* Twinkling stars */
+
+.stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    color: #E0DCFF;
+    text-shadow: 0 0 12px rgba(190, 180, 255, 0.9);
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.star-one {
+    top: 12%;
+    left: 20%;
+    font-size: 20px;
+}
+
+.star-two {
+    top: 25%;
+    right: 10%;
+    font-size: 15px;
+    animation-delay: 0.6s;
+}
+
+.star-three {
+    bottom: 20%;
+    left: 18%;
+    font-size: 17px;
+    animation-delay: 1s;
+}
+
+.star-four {
+    top: 70%;
+    right: 15%;
+    font-size: 22px;
+    animation-delay: 1.4s;
+}
+
+.star-five {
+    top: 8%;
+    right: 35%;
+    font-size: 12px;
+    animation-delay: 0.3s;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+/* =========================
+   WORLDS SECTION
+========================= */
+
+.worlds {
+    padding: 100px 7%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.worlds > .eyebrow {
+    margin-bottom: 20px;
+}
+
+.worlds > h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.3;
+    margin-bottom: 55px;
+    color: #F3F0FF;
+}
+/* Arrange the cards */
+
+.world-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Individual world cards */
+
+.world-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-width: 0;
+    min-height: 300px;
+    padding: 32px;
+    border: 1px solid rgba(196, 185, 255, 0.2);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+    text-decoration: none;
+    color: #F3F0FF;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.world-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(185, 174, 255, 0.7);
+    background: rgba(139, 124, 246, 0.09);
+}
+
+.card-symbol {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #B9AEFF;
+}
+
+.card-number {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #A99BFF;
+    margin-bottom: 15px;
+}
+
+.world-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 15px;
+}
+
+.world-card > p:not(.card-number) {
+    color: #B8B8CC;
+    line-height: 1.8;
+    margin: 0 0 25px;
+}
+
+.card-link {
+    margin-top: auto;
+    padding-top: 15px;
+    color: #C4B9FF;
+    font-size: 0.9rem;
+}
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    margin-top: 30px;
+    padding: 35px 7% 30px;
+    border-top: 1px solid rgba(196, 185, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    color: #B8B8CC;
+}
+
+.site-footer p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.site-footer p:first-child {
+    max-width: 450px;
+}
+
+#year {
+    color: #E0DCFF;
+}
+/* =========================
+   RESPONSIVE LAYOUT
+========================= */
+
+@media (max-width: 900px) {
+    .world-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .world-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .worlds {
+        padding: 65px 6%;
+    }
+
+    .world-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .world-card {
+        min-height: 260px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 30px 6%;
+    }
+}
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-12px);
+    }
+}
+/* =================================
+   MAKER'S LAB — INTRODUCTION
+================================= */
+
+.makers-hero {
+    min-height: 75vh;
+    padding: 100px 8% 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 80% 30%,
+            rgba(120, 90, 220, 0.15),
+            transparent 45%
+        );
+}
+
+/* Small introductory label */
+
+.section-label {
+    color: #B9A5FF;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Main heading */
+
+.makers-hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 0 0 28px;
+    max-width: 900px;
+}
+
+/* Gradient on the word CREATION */
+
+.makers-hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #B9A5FF,
+        #80D8FF
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Introductory paragraph */
+
+.makers-intro {
+    max-width: 650px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #C8C5D8;
+    margin-bottom: 35px;
+}
+
+/* Journey button */
+
+.journey-button {
+    display: inline-block;
+    padding: 15px 24px;
+    border: 1px solid rgba(185, 165, 255, 0.65);
+    border-radius: 30px;
+
+    color: #F3F0FF;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.journey-button:hover {
+    background: rgba(185, 165, 255, 0.15);
+    border-color: #B9A5FF;
+    transform: translateY(-3px);
+}
+
+/* Smaller screens */
+
+@media (max-width: 700px) {
+    .makers-hero {
+        min-height: 65vh;
+        padding: 75px 7%;
+    }
+
+    .makers-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .makers-intro {
+        font-size: 1rem;
+    }
+}
+/* =================================
+   MAKER'S LAB — JOURNEY TIMELINE
+================================= */
+
+.journey-section {
+    padding: 90px 8% 110px;
+}
+
+.journey-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+.journey-heading h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin: 0 0 22px;
+}
+
+.journey-heading h2 span {
+    color: #B9A5FF;
+}
+
+.journey-heading > p:last-child {
+    color: #C8C5D8;
+    font-size: 1rem;
+    line-height: 1.9;
+    max-width: 620px;
+}
+
+/* Timeline card layout */
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Individual milestone */
+
+.timeline-card {
+    position: relative;
+    padding: 28px;
+    border: 1px solid rgba(185, 165, 255, 0.18);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(185, 165, 255, 0.65);
+    background: rgba(185, 165, 255, 0.055);
+}
+
+/* Year */
+
+.timeline-year {
+    display: inline-block;
+    color: #B9A5FF;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* Icon */
+
+.timeline-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+    background: rgba(185, 165, 255, 0.12);
+    font-size: 1.5rem;
+
+    margin-bottom: 22px;
+}
+
+/* Card heading */
+
+.timeline-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+}
+
+/* Event or location */
+
+.timeline-place {
+    color: #9CBFFF;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+}
+
+/* Description */
+
+.timeline-card > p:not(.timeline-place) {
+    color: #C8C5D8;
+    font-size: 0.94rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* Small category label */
+
+.timeline-tag {
+    display: inline-block;
+    color: #B9A5FF;
+    font-size: 0.68rem;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+    .timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .journey-section {
+        padding: 65px 7% 80px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-card {
+        padding: 25px;
+    }
+}
+/* =================================
+   MAKER'S LAB — PERSONAL STORY
+================================= */
+
+.story-section {
+    padding: 70px 8% 110px;
+}
+
+.story-heading {
+    max-width: 720px;
+    margin-bottom: 45px;
+}
+
+.story-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin: 0 0 20px;
+}
+
+.story-heading h2 span {
+    color: #B9A5FF;
+}
+
+.story-subtitle {
+    color: #C8C5D8;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* Story container */
+
+.story-card {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 25px;
+
+    max-width: 950px;
+    padding: 38px;
+
+    border: 1px solid rgba(185, 165, 255, 0.2);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(185, 165, 255, 0.07),
+            rgba(255, 255, 255, 0.015)
+        );
+}
+
+/* Large chapter number */
+
+.story-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgba(185, 165, 255, 0.55);
+}
+
+/* Story text */
+
+.story-content {
+    max-width: 700px;
+}
+
+.story-label {
+    color: #9CBFFF;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.story-content h3 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.4;
+    margin: 0 0 25px;
+}
+
+.story-content > p:not(.story-label) {
+    color: #D0CDDE;
+    font-size: 1rem;
+    line-height: 1.95;
+    margin-bottom: 22px;
+}
+
+.story-content > p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .story-section {
+        padding: 55px 7% 80px;
+    }
+
+    .story-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 25px;
+    }
+
+    .story-number {
+        font-size: 1.8rem;
+    }
+}
+/* =================================
+   MAKER'S LAB — PROJECT EXPLORER
+================================= */
+
+.project-explorer {
+    padding: 80px 8% 110px;
+}
+
+.project-heading {
+    max-width: 720px;
+    margin-bottom: 42px;
+}
+
+.project-heading h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.project-heading h2 span {
+    color: #B9A5FF;
+}
+
+.project-heading > p:last-child {
+    color: #C8C5D8;
+    line-height: 1.9;
+    max-width: 620px;
+}
+
+/* Project selector */
+
+.project-selector {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.project-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+
+    min-width: 0;
+    padding: 24px;
+
+    color: #F3F0FF;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(185, 165, 255, 0.18);
+    border-radius: 18px;
+
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project-option:hover {
+    border-color: rgba(185, 165, 255, 0.65);
+    transform: translateY(-3px);
+}
+
+.project-option.active {
+    background: rgba(185, 165, 255, 0.11);
+    border-color: #B9A5FF;
+}
+
+.project-option:focus-visible {
+    outline: 2px solid #80D8FF;
+    outline-offset: 4px;
+}
+
+.project-option-icon {
+    font-size: 2rem;
+}
+
+.project-option-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.project-option-type {
+    color: #B9A5FF;
+    font-size: 0.68rem;
+    letter-spacing: 1.3px;
+    line-height: 1.6;
+}
+
+/* Project details */
+
+.project-display {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.4fr);
+    gap: 35px;
+
+    padding: 35px;
+    border: 1px solid rgba(185, 165, 255, 0.22);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(185, 165, 255, 0.07),
+            rgba(255, 255, 255, 0.015)
+        );
+}
+
+/* Visual placeholder for project images */
+
+.project-display-visual {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    border-radius: 18px;
+    border: 1px dashed rgba(185, 165, 255, 0.3);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(120, 90, 220, 0.15),
+            transparent 70%
+        );
+}
+
+.project-display-visual > span {
+    font-size: 5rem;
+}
+
+.project-display-visual > p {
+    color: #B9A5FF;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding: 0 12px;
+}
+
+/* Project text */
+
+.project-display-details {
+    min-width: 0;
+}
+
+.project-status {
+    display: inline-block;
+    color: #9CBFFF;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.project-display-details h3 {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.25;
+    margin: 0 0 18px;
+}
+
+.project-description {
+    color: #D0CDDE;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.project-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-info-label {
+    color: #B9A5FF;
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    line-height: 1.7;
+}
+
+.project-info p {
+    color: #C8C5D8;
+    font-size: 0.92rem;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+    .project-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .project-option {
+        display: grid;
+        grid-template-columns: 48px minmax(0, 1fr);
+        align-items: center;
+        gap: 5px 14px;
+    }
+
+    .project-option-icon {
+        grid-row: span 2;
+    }
+
+    .project-display {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-display-visual {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-explorer {
+        padding: 60px 7% 80px;
+    }
+
+    .project-display {
+        padding: 22px;
+    }
+
+    .project-info {
+        grid-template-columns: 1fr;
+    }
+}
+/* MY PERSONAL HANDWRITING */
+.eyebrow,
+.tiny-note,
+.makers-intro,
+.journey-heading > p:not(.section-label),
+#story-text p,
+.project-heading > p:not(.section-label),
+.project-description,
+.project-info p,
+.hero-description,
+.art-caption,
+.world-card > p:not(.card-number),
+.site-footer p,
+.personal-note {
+    font-family: "MyHandwriting", cursive;
+    font-weight: normal;
+    line-height: 1.7;
+}
+/* =================================
+   INTERACTIVE JOURNEY
+================================= */
+
+.interactive-journey {
+    padding: 90px 8% 100px;
+}
+
+.journey-heading {
+    max-width: 760px;
+    margin-bottom: 45px;
+}
+
+.journey-heading h2,
+.project-heading h2 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    line-height: 1.15;
+    margin: 0 0 22px;
+}
+
+.journey-heading h2 span,
+.project-heading h2 span {
+    color: #B9A5FF;
+}
+
+.journey-heading > p:not(.section-label),
+.project-heading > p:not(.section-label) {
+    max-width: 650px;
+    color: #C8C5D8;
+    line-height: 1.8;
+}
+
+/* Timeline milestone buttons */
+
+.journey-tabs {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.journey-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 20px 16px;
+
+    color: #F3F0FF;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(185, 165, 255, 0.2);
+    border-radius: 16px;
+
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.journey-tab:hover {
+    transform: translateY(-3px);
+    border-color: #B9A5FF;
+}
+
+.journey-tab.active {
+    background: rgba(185, 165, 255, 0.12);
+    border-color: #B9A5FF;
+    box-shadow: 0 0 22px rgba(185, 165, 255, 0.08);
+}
+
+.journey-tab:focus-visible {
+    outline: 2px solid #80D8FF;
+    outline-offset: 3px;
+}
+
+.tab-year {
+    color: #9CBFFF;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.tab-icon {
+    font-size: 1.6rem;
+}
+
+.tab-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Story display */
+
+.journey-display {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 30px;
+
+    max-width: 1100px;
+    padding: 35px;
+
+    border: 1px solid rgba(185, 165, 255, 0.2);
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(185, 165, 255, 0.08),
+        rgba(255, 255, 255, 0.015)
+    );
+}
+
+.journey-display-number {
+    color: rgba(185, 165, 255, 0.7);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.journey-display-content {
+    min-width: 0;
+}
+
+.story-label {
+    color: #9CBFFF;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.journey-display-content h3 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+#story-text p {
+    color: #D0CDDE;
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+#story-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive timeline */
+
+@media (max-width: 900px) {
+    .journey-tabs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .journey-display {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .interactive-journey {
+        padding: 60px 6% 75px;
+    }
+
+    .journey-tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .journey-display {
+        padding: 24px;
+    }
+
+    .journey-display-number {
+        font-size: 0.9rem;
+    }
+}
+/* ==============================
+   MY UNIVERSE AVATAR
+============================== */
+
+.avatar-guide {
+    position: relative;
+    width: min(100%, 380px);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    isolation: isolate;
+    animation: none;
+}
+/* The avatar gently floats */
+
+.universe-avatar {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    animation: avatarFloat 4s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 18px rgba(255, 205, 105, 0.12));
+
+    transition:
+        filter 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* A little extra glow when visitors hover */
+
+.avatar-guide:hover .universe-avatar {
+    filter:
+        drop-shadow(0 0 28px rgba(255, 205, 105, 0.4));
+}
+
+/* AVATAR DECORATIVE STARS */
+
+.avatar-star {
+    position: absolute;
+    z-index: 3;
+    color: #ffd477;
+    font-size: 2rem;
+    pointer-events: none;
+
+    text-shadow:
+        0 0 8px rgba(255, 212, 119, 0.8),
+        0 0 20px rgba(255, 212, 119, 0.4);
+}
+
+.avatar-star-one {
+    top: 22%;
+    left: 3%;
+    animation: starDriftOne 3.5s ease-in-out infinite;
+}
+
+.avatar-star-two {
+    top: 48%;
+    right: 0%;
+    font-size: 1.6rem;
+    animation: starDriftTwo 4s ease-in-out infinite;
+}
+
+.avatar-star-three {
+    top: 5%;
+    right: 18%;
+    font-size: 1.3rem;
+    animation: starTwinkle 2.5s ease-in-out infinite;
+}
+
+/* Caption */
+
+.avatar-caption {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -8px;
+
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #f4dca7;
+
+    text-align: center;
+}
+
+/* ==============================
+   ANIMATION KEYFRAMES
+============================== */
+
+@keyframes avatarFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes starDriftOne {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-8px, -13px) rotate(15deg);
+    }
+}
+
+@keyframes starDriftTwo {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(8px, -12px) rotate(-15deg);
+    }
+}
+
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 0.45;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+    .avatar-guide {
+        width: min(85%, 300px);
+        margin: 20px auto;
+    }
+
+    .avatar-caption {
+        font-size: 0.8rem;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .universe-avatar,
+    .avatar-star {
+        animation: none;
+    }
+}
+/* =========================
+   MOBILE HOMEPAGE HERO FIX
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Give the hero enough space */
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 40px 22px 60px;
+        overflow: visible;
+    }
+
+    /* Stop the heading from becoming excessively narrow */
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 3.8rem);
+        line-height: 1.05;
+        letter-spacing: -1px;
+        max-width: 100%;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    /* Let the handwritten introduction use the full width */
+    .hero-description {
+        max-width: 100%;
+        width: 100%;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        margin-top: 24px;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 24px 0 0;
+
+        font-size: 1.1rem;
+        line-height: 1.7;
+
+        overflow-wrap: break-word;
+    }
+
+}
+/* FIX HOMEPAGE HERO ON MOBILE */
+
+@media (max-width: 600px) {
+
+    .explore-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        width: fit-content;
+        max-width: 100%;
+        margin: 24px 0 12px;
+
+        white-space: nowrap;
+        position: relative;
+        z-index: 5;
+    }
+
+    .tiny-note {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+
+        margin: 12px 0 0;
+
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+
+        position: relative;
+        z-index: 1;
+    }
+}
+/* AVATAR AND UNIVERSE LAYOUT */
+
+.hero-visual {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.avatar-guide {
+    width: min(100%, 300px);
+    margin: 0 auto;
+}
+
+.universe-avatar {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+        padding: 45px 22px 60px;
+    }
+
+    .hero-content {
+        width: 100%;
+        flex: none;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+        line-height: 1.12;
+    }
+
+    .hero-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .universe-art {
+        max-width: 100%;
+    }
+}
+/* =========================
+   FAVÉRA PAGE
+========================= */
+
+.favera-page {
+    width: 100%;
+    overflow: hidden;
+}
+
+.favera-hero {
+    min-height: 75vh;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f4eddf;
+    color: #35271f;
+}
+
+.favera-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9a7048;
+    margin-bottom: 22px;
+}
+
+.favera-hero h1 {
+    font-size: clamp(2.7rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    margin: 0 0 25px;
+    max-width: 1000px;
+}
+
+.favera-hero h1 span {
+    color: #a16f45;
+}
+
+.favera-intro {
+    max-width: 620px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #67564a;
+}
+
+.favera-highlight {
+    margin-top: 40px;
+    padding: 22px 28px;
+    border-left: 3px solid #a16f45;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.favera-highlight span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #815535;
+}
+
+.favera-highlight p {
+    margin: 8px 0 0;
+    color: #67564a;
+}
+
+.favera-story {
+    padding: 85px 12%;
+    background: #fffaf2;
+    color: #403127;
+}
+
+.favera-story h2,
+.favera-future h2 {
+    max-width: 800px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin: 0 0 25px;
+}
+
+.favera-story > p:not(.favera-eyebrow),
+.favera-future > p:not(.favera-eyebrow) {
+    max-width: 750px;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #716055;
+    margin-bottom: 20px;
+}
+
+.favera-future {
+    padding: 90px 12%;
+    background: #e8d7c1;
+    color: #35271f;
+}
+
+.favera-future .favera-eyebrow {
+    color: #795333;
+}
+
+.favera-future h2 {
+    color: #35271f;
+}
+
+.favera-future > p:not(.favera-eyebrow) {
+    color: #5f4a3c;
+}
+
+.favera-closing {
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(75, 50, 30, 0.25);
+}
+
+.favera-closing p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.favera-closing span {
+    font-style: italic;
+    color: #815535;
+}
+
+.site-footer {
+    padding: 25px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .favera-hero {
+        min-height: auto;
+        padding: 75px 7%;
+    }
+
+    .favera-story,
+    .favera-future {
+        padding: 65px 7%;
+    }
+
+    .favera-highlight {
+        padding: 18px;
+    }
+
+    .favera-highlight span {
+        font-size: 1.7rem;
+    }
+}
+/* =========================
+   REBUILDING AFRICA
+========================= */
+
+.rebuild-page {
+    width: 100%;
+    overflow: hidden;
+    background: #f8f6ee;
+    color: #253d31;
+}
+
+.rebuild-hero {
+    min-height: 82vh;
+    padding: 100px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: #173d30;
+    color: #f8f6ee;
+}
+
+.rebuild-eyebrow {
+    margin-bottom: 22px;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b7c99b;
+}
+
+.rebuild-hero h1 {
+    margin: 0 0 28px;
+    max-width: 1000px;
+    font-size: clamp(2.8rem, 6.5vw, 6rem);
+    line-height: 1.08;
+}
+
+.rebuild-hero h1 span {
+    color: #d5bc77;
+}
+
+.rebuild-intro {
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #e0e7dd;
+}
+
+.rebuild-button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 15px 24px;
+    border: 1px solid #d5bc77;
+    color: #f8f6ee;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.rebuild-button:hover {
+    background: #d5bc77;
+    color: #173d30;
+}
+
+.rebuild-story {
+    padding: 90px 13%;
+    background: #f8f6ee;
+}
+
+.rebuild-story h2,
+.rebuild-rwanda h2,
+.rebuild-mission h2,
+.rebuild-future h2 {
+    max-width: 850px;
+    margin: 0 0 28px;
+    font-size: clamp(2rem, 4.5vw, 3.7rem);
+    line-height: 1.2;
+}
+
+.rebuild-story > p:not(.rebuild-eyebrow),
+.rebuild-rwanda-content > p:not(.rebuild-eyebrow),
+.rebuild-future > p:not(.rebuild-eyebrow) {
+    max-width: 760px;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+    line-height: 1.95;
+    color: #58665b;
+}
+
+.rebuild-rwanda {
+    padding: 90px 10%;
+    background: #e8eee3;
+}
+
+.rebuild-rwanda-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rebuild-quote {
+    max-width: 850px;
+    margin: 55px auto 0;
+    padding: 35px;
+    border-left: 3px solid #9eae76;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.quote-mark {
+    display: block;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #8c9e67;
+}
+
+.rebuild-quote p {
+    margin: 10px 0 22px;
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.quote-caption {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #63745e;
+}
+
+.rebuild-mission {
+    padding: 95px 9%;
+    background: #f8f6ee;
+}
+
+.rebuild-mission-intro {
+    max-width: 800px;
+    margin-bottom: 45px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #58665b;
+}
+
+.rebuild-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 45px;
+}
+
+.rebuild-pillar {
+    padding: 30px 25px;
+    border-top: 2px solid #8c9e67;
+    background: #edf0e7;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rebuild-pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(35, 61, 47, 0.08);
+}
+
+.pillar-number {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #899968;
+}
+
+.rebuild-pillar h3 {
+    margin: 22px 0 15px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    color: #254735;
+}
+
+.rebuild-pillar p {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: #58665b;
+}
+
+.rebuild-future {
+    padding: 90px 12%;
+    background: #dce6d5;
+}
+
+.rebuild-final-message {
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(37, 61, 49, 0.2);
+}
+
+.rebuild-final-message p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+.rebuild-final-message span {
+    color: #52734f;
+    font-style: italic;
+}
+
+@media (max-width: 750px) {
+    .rebuild-hero {
+        min-height: auto;
+        padding: 80px 7%;
+    }
+
+    .rebuild-story,
+    .rebuild-rwanda,
+    .rebuild-mission,
+    .rebuild-future {
+        padding: 65px 7%;
+    }
+
+    .rebuild-pillars {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .rebuild-pillar {
+        padding: 25px 22px;
+    }
+
+    .rebuild-quote {
+        padding: 25px;
+    }
+}
+/* ==========================
+   FAVÉRA — COSMIC THEME
+========================== */
+
+.favera-page {
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(107, 91, 191, 0.18),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 85% 75%,
+            rgba(71, 120, 180, 0.16),
+            transparent 40%
+        ),
+        #111827;
+    color: #F3F0FF;
+}
+
+.favera-hero {
+    background: transparent;
+    color: #F3F0FF;
+}
+
+.favera-hero h1 span {
+    color: #B9A5FF;
+}
+
+.favera-eyebrow,
+.favera-future .favera-eyebrow {
+    color: #B9A5FF;
+}
+
+.favera-intro {
+    color: #D0CDE0;
+}
+
+.favera-highlight {
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: #B9A5FF;
+}
+
+.favera-highlight span {
+    color: #B9A5FF;
+}
+
+.favera-highlight p {
+    color: #D0CDE0;
+}
+
+.favera-story {
+    background: rgba(107, 91, 191, 0.07);
+    color: #F3F0FF;
+}
+
+.favera-story h2,
+.favera-future h2 {
+    color: #F3F0FF;
+}
+
+.favera-story > p:not(.favera-eyebrow),
+.favera-future > p:not(.favera-eyebrow) {
+    color: #D0CDE0;
+}
+
+.favera-future {
+    background: rgba(71, 120, 180, 0.09);
+    color: #F3F0FF;
+}
+
+.favera-closing {
+    border-top-color: rgba(185, 165, 255, 0.3);
+}
+
+.favera-closing span {
+    color: #B9A5FF;
+}
+/* ==========================
+   REBUILDING AFRICA — COSMIC THEME
+========================== */
+
+.rebuild-page {
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(107, 91, 191, 0.18),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 85% 75%,
+            rgba(71, 120, 180, 0.16),
+            transparent 40%
+        ),
+        #111827;
+    color: #F3F0FF;
+}
+
+.rebuild-hero {
+    background: transparent;
+    color: #F3F0FF;
+}
+
+.rebuild-hero h1 span {
+    color: #B9A5FF;
+}
+
+.rebuild-eyebrow {
+    color: #B9A5FF;
+}
+
+.rebuild-intro {
+    color: #D0CDE0;
+}
+
+.rebuild-button {
+    border-color: #B9A5FF;
+    color: #F3F0FF;
+}
+
+.rebuild-button:hover {
+    background: #B9A5FF;
+    color: #111827;
+}
+
+.rebuild-story {
+    background: rgba(107, 91, 191, 0.07);
+    color: #F3F0FF;
+}
+
+.rebuild-rwanda {
+    background: rgba(71, 120, 180, 0.08);
+    color: #F3F0FF;
+}
+
+.rebuild-story h2,
+.rebuild-rwanda h2,
+.rebuild-mission h2,
+.rebuild-future h2 {
+    color: #F3F0FF;
+}
+
+.rebuild-story > p:not(.rebuild-eyebrow),
+.rebuild-rwanda-content > p:not(.rebuild-eyebrow),
+.rebuild-future > p:not(.rebuild-eyebrow) {
+    color: #D0CDE0;
+}
+
+.rebuild-quote {
+    background: rgba(255, 255, 255, 0.04);
+    border-left-color: #B9A5FF;
+}
+
+.rebuild-quote p {
+    color: #F3F0FF;
+}
+
+.quote-mark {
+    color: #B9A5FF;
+}
+
+.quote-caption {
+    color: #D0CDE0;
+}
+
+.rebuild-mission {
+    background: rgba(107, 91, 191, 0.07);
+    color: #F3F0FF;
+}
+
+.rebuild-mission-intro {
+    color: #D0CDE0;
+}
+
+.rebuild-pillar {
+    background: rgba(255, 255, 255, 0.04);
+    border-top-color: #B9A5FF;
+}
+
+.rebuild-pillar h3 {
+    color: #F3F0FF;
+}
+
+.rebuild-pillar p {
+    color: #D0CDE0;
+}
+
+.pillar-number {
+    color: #B9A5FF;
+}
+
+.rebuild-future {
+    background: rgba(71, 120, 180, 0.08);
+    color: #F3F0FF;
+}
+
+.rebuild-final-message {
+    border-top-color: rgba(185, 165, 255, 0.3);
+}
+
+.rebuild-final-message span {
+    color: #B9A5FF;
+}

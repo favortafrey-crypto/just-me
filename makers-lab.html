@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maker's Lab | My Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            MY<span>UNIVERSE</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="makers-lab.html" class="active">Maker's Lab</a>
+            <a href="favera.html">Favéra</a>
+            <a href="rebuilding-africa.html">Rebuilding Africa</a>
+        </nav>
+    </header>
+
+
+    <!-- MAKER'S LAB INTRODUCTION -->
+    <main>
+
+        <section class="makers-hero">
+
+            <p class="section-label">
+                ✦ CURIOSITY IN ACTION
+            </p>
+
+            <h1>
+                FROM CURIOSITY<br>
+                TO <span>CREATION.</span>
+            </h1>
+
+            <p class="makers-intro">
+                Every engineer starts somewhere. This is the story of
+                how I found my way into technology, discovered the joy
+                of building things, and began imagining a future I
+                genuinely want to create.
+            </p>
+
+            <a href="#my-journey" class="journey-button">
+                EXPLORE MY JOURNEY ↓
+            </a>
+
+        </section>
+
+
+        <!-- OUR JOURNEY WILL GO HERE -->
+<!-- =================================
+     INTERACTIVE MAKER'S JOURNEY
+================================= -->
+
+<section class="interactive-journey" id="my-journey">
+
+    <div class="journey-heading">
+        <p class="section-label">✦ THE STORY SO FAR</p>
+
+        <h2>EVERYTHING STARTED <span>SOMEWHERE.</span></h2>
+
+        <p>
+            Every experience added something to who I am today.
+            Choose a moment to explore the story behind it.
+        </p>
+    </div>
+
+
+    <!-- MILESTONE SELECTOR -->
+
+    <div class="journey-tabs" role="group" aria-label="Choose a journey milestone">
+
+        <button class="journey-tab active"
+                type="button"
+                data-story="jumpstart"
+                aria-pressed="true">
+            <span class="tab-year">2023</span>
+            <span class="tab-icon">⚡</span>
+            <span class="tab-name">Jumpstart</span>
+        </button>
+
+        <button class="journey-tab"
+                type="button"
+                data-story="hackathon"
+                aria-pressed="false">
+            <span class="tab-year">2025</span>
+            <span class="tab-icon">🎮</span>
+            <span class="tab-name">First Game</span>
+        </button>
+
+        <button class="journey-tab"
+                type="button"
+                data-story="tic"
+                aria-pressed="false">
+            <span class="tab-year">2026</span>
+            <span class="tab-icon">💡</span>
+            <span class="tab-name">TIC Summit</span>
+        </button>
+
+        <button class="journey-tab"
+                type="button"
+                data-story="rwanda"
+                aria-pressed="false">
+            <span class="tab-year">2026</span>
+            <span class="tab-icon">🤖</span>
+            <span class="tab-name">Rwanda</span>
+        </button>
+
+        <button class="journey-tab"
+                type="button"
+                data-story="today"
+                aria-pressed="false">
+            <span class="tab-year">NOW</span>
+            <span class="tab-icon">🛠️</span>
+            <span class="tab-name">Today</span>
+        </button>
+
+    </div>
+
+
+    <!-- SELECTED STORY APPEARS HERE -->
+
+    <article class="journey-display" aria-live="polite" aria-atomic="true">
+
+        <div class="journey-display-number" id="story-number">
+            CHAPTER 01
+        </div>
+
+        <div class="journey-display-content">
+
+            <p class="story-label" id="story-label">
+                JUMPSTART ACADEMY · 2023
+            </p>
+
+            <h3 id="story-title">
+                The first spark.
+            </h3>
+
+            <div id="story-text">
+
+                <p>
+                    Around 2023, I attended Jumpstart Academy,
+                    my first technology program. During the
+                    summer program, I learned HTML and got
+                    introduced to Arduino. I was beginning to
+                    discover that technology could be more
+                    than something I used. I could actually
+                    use it to create things.
+                </p>
+
+                <p>
+                    One of the highlights was working with my
+                    group on a machine that detected muscle
+                    contraction. Our group came first, and I
+                    received the overall best leader award.
+                </p>
+
+                <p>
+                    I don't have pictures from that experience
+                    anymore, but that doesn't make it any less
+                    important to my story. Jumpstart was one
+                    of the first steps in a journey I didn't
+                    yet fully understand.
+                </p>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+        <!-- OUR PROJECTS WILL GO HERE -->
+
+<script>
+const stories = {
+    jumpstart: {
+        number: "CHAPTER 01",
+        label: "JUMPSTART ACADEMY · 2023",
+        title: "The first spark.",
+        paragraphs: [
+            "Around 2023, I attended Jumpstart Academy, my first technology program. During the summer program, I learned HTML and got introduced to Arduino. I was beginning to discover that technology could be more than something I used. I could actually use it to create things.",
+            "One of the highlights was working with my group on a machine that detected muscle contraction. Our group came first, and I received the overall best leader award.",
+            "I don't have pictures from that experience anymore, but that doesn't make it any less important to my story. Jumpstart was one of the first steps in a journey I didn't yet fully understand."
+        ]
+    },
+
+    hackathon: {
+        number: "CHAPTER 02",
+        label: "HACK CLUB HACKATHON · 2025",
+        title: "A new kind of excitement.",
+        paragraphs: [
+            "In 2025, I participated in a Hack Club hackathon in Cameroon, where I created my very first game. It wasn't perfect, and I didn't win, but that experience gave me something more important than a prize: a new kind of excitement.",
+            "For the first time, I was exploring how code could become an experience someone else could interact with. Programming could be a way to tell stories, build worlds, and bring ideas to life.",
+            "That experience sparked an interest I wanted to explore further. I was beginning to discover how much I could create if I kept learning and experimenting."
+        ]
+    },
+
+    tic: {
+        number: "CHAPTER 03",
+        label: "TIC SUMMIT · 2026",
+        title: "Ideas with purpose.",
+        paragraphs: [
+            "In 2026, I took part in the TIC Summit as one of the pitchers in my group. We presented an idea for an Arduino-based wound-monitoring system intended to support wound care.",
+            "The experience challenged me to think about how technology could address real problems. It wasn't enough to have an interesting idea. I also had to think about its purpose, how it might work, and how it could become practical.",
+            "I left with more questions about engineering and what it takes to turn an idea into a useful solution. I was learning to think about the people our creations are meant to help."
+        ]
+    },
+
+    rwanda: {
+        number: "CHAPTER 04",
+        label: "RWANDA · 2026",
+        title: "The moment my direction changed.",
+        paragraphs: [
+            "In 2026, I travelled to Rwanda and had the opportunity to see real robots and explore LEGO SPIKE Prime. I learned how to build a robot using the kit, and I began to see engineering in a way I hadn't experienced before.",
+            "For a long time, I had imagined becoming a surgeon. But seeing robotics up close made me curious about the people who designed these machines, the systems behind them, and the possibilities engineering could open up.",
+            "I started researching engineering more seriously. What had once been a distant interest became something I could genuinely imagine pursuing. Rwanda helped me realise that I wanted to become an engineer."
+        ]
+    },
+
+    today: {
+        number: "CHAPTER 05",
+        label: "MY JOURNEY · 2026 — NOW",
+        title: "Still becoming.",
+        paragraphs: [
+            "Through Hack Club, I've continued exploring technology through projects, CAD design, game development, and other STEM experiences. I've discovered how much I enjoy designing things and understanding how different parts of a project fit together.",
+            "I'm currently in my final year of A Levels, preparing for my examinations. School takes up a lot of my time, so I can't code as often as I'd like. Even so, I'm still learning whenever I can, and I hope to attend another Hack Club hackathon this year.",
+            "I've always worked hard academically, but these experiences have changed what achievement means to me. I don't just want to study because I can do well. I want to build a future around the things I'm genuinely passionate about.",
+            "I'm still learning, experimenting, and figuring things out. I don't have every step planned yet, but I know the direction I want to move in. This is only the beginning."
+        ]
+    }
+};
+
+const storyButtons = document.querySelectorAll(".journey-tab");
+const storyNumber = document.getElementById("story-number");
+const storyLabel = document.getElementById("story-label");
+const storyTitle = document.getElementById("story-title");
+const storyText = document.getElementById("story-text");
+
+storyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const story = stories[button.dataset.story];
+
+        if (!story) return;
+
+        storyNumber.textContent = story.number;
+        storyLabel.textContent = story.label;
+        storyTitle.textContent = story.title;
+
+        storyText.replaceChildren();
+
+        story.paragraphs.forEach(paragraph => {
+            const p = document.createElement("p");
+            p.textContent = paragraph;
+            storyText.appendChild(p);
+        });
+
+        storyButtons.forEach(tab => {
+            const isActive = tab === button;
+            tab.classList.toggle("active", isActive);
+            tab.setAttribute("aria-pressed", String(isActive));
+        });
+    });
+});
+</script>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>Made with curiosity, creativity, and a little bit of chaos.</p>
+        <p>© <span id="year"></span> — My Universe</p>
+    </footer>
+
+   <script>
+    // Update the footer year
+    const year = document.querySelector("#year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+    // TIMELINE SCRIPT GOES HERE
+
+    // PROJECT EXPLORER SCRIPT GOES HERE
+</script>
+
+</body>
+</html>
