@@ -14,7 +14,7 @@
     <!-- NAVIGATION -->
     <header class="site-header">
         <a href="index.html" class="logo">
-            MY<span>UNIVERSE</span>
+           JUST<span>ME</span>
         </a>
 
         <nav class="nav-links">
@@ -30,6 +30,24 @@
     <main>
 
         <section class="makers-hero">
+            
+        <div class="avatar-guide">
+
+            <div class="avatar-star avatar-star-one">✦</div>
+            <div class="avatar-star avatar-star-two">✧</div>
+            <div class="avatar-star avatar-star-three">⋆</div>
+
+            <img
+                src="image/avatar.png"
+                alt="My illustrated avatar, ready to guide you through My Universe"
+                class="universe-avatar"
+            >
+
+            <span class="avatar-caption">
+                your guide to my universe ✨
+            </span>
+
+        </div>
 
             <p class="section-label">
                 ✦ CURIOSITY IN ACTION
@@ -145,32 +163,8 @@
 
             <div id="story-text">
 
-                <p>
-                    Around 2023, I attended Jumpstart Academy,
-                    my first technology program. During the
-                    summer program, I learned HTML and got
-                    introduced to Arduino. I was beginning to
-                    discover that technology could be more
-                    than something I used. I could actually
-                    use it to create things.
-                </p>
-
-                <p>
-                    One of the highlights was working with my
-                    group on a machine that detected muscle
-                    contraction. Our group came first, and I
-                    received the overall best leader award.
-                </p>
-
-                <p>
-                    I don't have pictures from that experience
-                    anymore, but that doesn't make it any less
-                    important to my story. Jumpstart was one
-                    of the first steps in a journey I didn't
-                    yet fully understand.
-                </p>
-
             </div>
+            <div id="story-images" class="story-images"></div>
 
         </div>
 
@@ -193,7 +187,7 @@ const stories = {
             "I don't have pictures from that experience anymore, but that doesn't make it any less important to my story. Jumpstart was one of the first steps in a journey I didn't yet fully understand."
         ]
     },
-
+   
     hackathon: {
         number: "CHAPTER 02",
         label: "HACK CLUB HACKATHON · 2025",
@@ -202,7 +196,10 @@ const stories = {
             "In 2025, I participated in a Hack Club hackathon in Cameroon, where I created my very first game. It wasn't perfect, and I didn't win, but that experience gave me something more important than a prize: a new kind of excitement.",
             "For the first time, I was exploring how code could become an experience someone else could interact with. Programming could be a way to tell stories, build worlds, and bring ideas to life.",
             "That experience sparked an interest I wanted to explore further. I was beginning to discover how much I could create if I kept learning and experimenting."
-        ]
+        ],
+            images: [
+        "image/hack club.jpeg"
+    ]
     },
 
     tic: {
@@ -213,7 +210,11 @@ const stories = {
             "In 2026, I took part in the TIC Summit as one of the pitchers in my group. We presented an idea for an Arduino-based wound-monitoring system intended to support wound care.",
             "The experience challenged me to think about how technology could address real problems. It wasn't enough to have an interesting idea. I also had to think about its purpose, how it might work, and how it could become practical.",
             "I left with more questions about engineering and what it takes to turn an idea into a useful solution. I was learning to think about the people our creations are meant to help."
-        ]
+        ],
+        images: [
+        "image/healtech.png",
+        "image/wound-heal.jpg" 
+    ]
     },
 
     rwanda: {
@@ -224,7 +225,10 @@ const stories = {
             "In 2026, I travelled to Rwanda and had the opportunity to see real robots and explore LEGO SPIKE Prime. I learned how to build a robot using the kit, and I began to see engineering in a way I hadn't experienced before.",
             "For a long time, I had imagined becoming a surgeon. But seeing robotics up close made me curious about the people who designed these machines, the systems behind them, and the possibilities engineering could open up.",
             "I started researching engineering more seriously. What had once been a distant interest became something I could genuinely imagine pursuing. Rwanda helped me realise that I wanted to become an engineer."
-        ]
+        ],
+         images: [
+        "image/coderina.jpeg"
+    ]
     },
 
     today: {
@@ -236,7 +240,11 @@ const stories = {
             "I'm currently in my final year of A Levels, preparing for my examinations. School takes up a lot of my time, so I can't code as often as I'd like. Even so, I'm still learning whenever I can, and I hope to attend another Hack Club hackathon this year.",
             "I've always worked hard academically, but these experiences have changed what achievement means to me. I don't just want to study because I can do well. I want to build a future around the things I'm genuinely passionate about.",
             "I'm still learning, experimenting, and figuring things out. I don't have every step planned yet, but I know the direction I want to move in. This is only the beginning."
-        ]
+        ],
+           images: [
+        "image/yarnwinder.png",
+        "image/organizer.png" 
+    ]
     }
 };
 
@@ -263,6 +271,20 @@ storyButtons.forEach(button => {
             p.textContent = paragraph;
             storyText.appendChild(p);
         });
+        const storyImages = document.getElementById("story-images");
+
+storyImages.replaceChildren();
+
+if (story.images) {
+    story.images.forEach(imagePath => {
+        const img = document.createElement("img");
+
+        img.src = imagePath;
+        img.alt = story.title;
+
+        storyImages.appendChild(img);
+    });
+}
 
         storyButtons.forEach(tab => {
             const isActive = tab === button;
@@ -294,5 +316,9 @@ storyButtons.forEach(button => {
     // PROJECT EXPLORER SCRIPT GOES HERE
 </script>
 
+<audio id="cosmic-audio" loop preload="auto">
+    <source src="sound/sound.mp3" type="audio/mpeg">
+</audio>
+<script src="script.js"></script>
 </body>
 </html>
